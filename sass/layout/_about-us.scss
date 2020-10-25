@@ -1,0 +1,36 @@
+.about-us {
+  padding-bottom: 94px;
+}
+
+.about-us-list {
+  display: flex;
+}
+
+.about-us-list-item {
+  width: 370px;
+  position: relative;
+}
+
+.about-us-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.about-us-overlay {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+  padding: 27px 75px;
+}
+
+.about-us-overlay-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.142;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $secondary-color;
+}

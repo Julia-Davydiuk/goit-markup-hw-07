@@ -6,8 +6,8 @@
   --secondary-color: #ffffff;
   --title-color: #212121;
   --description-color: #757575;
-  --btn-background: #f5f4fa;
   --background-secondary: #2f303a;
+  --bacground-team: #f5f4fa;
   --contact-color: rgba(255, 255, 255, 0.6);
 }
 
@@ -38,22 +38,54 @@ img {
   display: block;
 }
 
+input {
+  font-family: inherit;
+}
+
+.logo-accent {
+  color: var(--accent-color);
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-/*===========COMPONENTS===========*/
-.logo-accent {
-  color: var(--accent-color);
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  width: 210px;
+  margin: 0 auto;
 }
-/*===========END COMPONENTS===========*/
 
-/*===========HEADER===========*/
-.header {
-  border-bottom: 1px solid #ececec;
+.team-social-list_item-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.team-social-list_item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team-social-list_item-link svg {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-social-list_item-link:hover svg,
+.team-social-list_item-link:hover {
+  fill: var(--secondary-color);
+  background: var(--accent-color);
+}
+
 .header .container {
   display: flex;
   align-items: center;
@@ -71,7 +103,6 @@ img {
 
 .address {
   display: flex;
-  align-items: center;
 }
 
 .navigation-list-item:not(:last-child) {
@@ -91,7 +122,6 @@ img {
   display: block;
   padding-top: 24px;
   padding-bottom: 25px;
-
   font-family: var(--secondary-font);
   font-weight: 700;
   font-size: 26px;
@@ -104,13 +134,28 @@ img {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-
   font-weight: 500;
   font-size: 14px;
   line-height: 1.143;
   letter-spacing: 0.02em;
   color: var(--title-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navigation-list-item {
+  position: relative;
+}
+
+.current::after {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  border-radius: 4px;
+  background-color: var(--accent-color);
 }
 
 .navigation-list .navigation-list-link.current {
@@ -128,10 +173,9 @@ img {
 
 .address-mail-link,
 .address-tel-link {
-  display: block;
+  display: inline-flex;
   padding-top: 32px;
   padding-bottom: 32px;
-
   font-weight: 500;
   font-size: 14px;
   line-height: 1.143;
@@ -152,24 +196,10 @@ img {
   fill: var(--accent-color);
 }
 
-.navigation-list-item {
-  position: relative;
-}
-.current::after {
-  content: "";
-  display: block;
-  height: 5px;
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  position: absolute;
-  border-radius: 4px;
-  background-color: var(--accent-color);
+.header {
+  border-bottom: 1px solid #ececec;
 }
 
-/*===========END HEADER===========*/
-
-/*===========BUTTON===========*/
 .our-projects {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -193,7 +223,6 @@ img {
 
 .modal-btn {
   padding: 6px 22px;
-
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
@@ -210,14 +239,10 @@ img {
 .modal-btn:focus {
   color: var(--secondary-color);
   background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
 
-/*===========END BUTTON===========*/
-
-/*===========ALL PROJECTS===========*/
 .projects-deskription {
   padding: 15px;
   border-right: 1px solid #eeeeee;
@@ -239,8 +264,7 @@ img {
 
 .projects-list-link:hover,
 .projects-list-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .projects-list-item {
@@ -284,11 +308,9 @@ img {
   height: 294px;
   background: rgba(33, 150, 243, 0.9);
   padding: 64px 24px;
-
   /* opacity: 0; */
   visibility: hidden;
   pointer-events: none;
-
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -308,9 +330,6 @@ img {
   color: var(--secondary-color);
 }
 
-/*===========END ALL PROJECTS===========*/
-
-/*===========FOOTER===========*/
 .contact {
   font-style: normal;
 }
@@ -334,7 +353,6 @@ img {
 .footer-logo {
   display: block;
   margin-bottom: 20px;
-
   font-family: var(--secondary-font);
   font-weight: 700;
   font-size: 26px;
@@ -350,7 +368,6 @@ img {
 .contact-location {
   display: block;
   margin-bottom: 10px;
-
   font-weight: 400;
   font-size: 14px;
   line-height: 1.714;
@@ -367,7 +384,6 @@ img {
 .contact-link {
   display: block;
   margin-bottom: 10px;
-
   font-weight: 400;
   font-size: 14px;
   line-height: 1.714;
@@ -380,7 +396,7 @@ img {
   display: flex;
 }
 
-/* ====================== */
+/* ==========SOCIAL============ */
 .social-footer {
   padding: 70px 93px 100px 70px;
   min-width: 200px;
@@ -394,18 +410,10 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--secondary-color);
-
   margin-bottom: 20px;
 }
 
 /*====sprite social list====*/
-.social-list {
-  display: flex;
-  justify-content: space-between;
-  width: 210px;
-  margin: 0 auto;
-}
-
 .social-list_item-link {
   display: flex;
   align-items: center;
@@ -427,6 +435,7 @@ img {
   background: var(--accent-color);
 }
 
+/* ===========END SOCIAL===========*/
 /* ===========SUBSCRIPTION===========*/
 .subscription {
   padding-top: 72px;
@@ -439,11 +448,9 @@ img {
   height: 50px;
   margin-right: 12px;
   padding-left: 16px;
-
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   background-color: inherit;
-
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
@@ -455,15 +462,12 @@ img {
 .subscription-form-button {
   position: relative;
   padding-left: 28px;
-
   width: 200px;
   height: 50px;
-
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: inherit;
   border-radius: 4px;
-
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
@@ -472,12 +476,11 @@ img {
   letter-spacing: 0.06em;
   color: var(--secondary-color);
 }
+
 .subscription-form-button-svg {
   position: absolute;
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
 }
-
-/* ===========END SUBSCRIPTION===========*/
-/*===========END FOOTER===========*/
+/*# sourceMappingURL=portfolio.css.map */

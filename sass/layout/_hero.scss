@@ -3,6 +3,18 @@
   padding-bottom: 200px;
   text-align: center;
   background: $background-secondary;
+
+   &-title {
+  margin: 0 auto;
+  max-width: 650px;
+  margin-bottom: 30px;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.363;
+  letter-spacing: 0.06em;
+  color: $secondary-color;
+}
 }
 
 .overlay {
@@ -19,18 +31,6 @@
 
   background-size: cover;
   background-position: center;
-}
-
-.hero-title {
-  margin: 0 auto;
-  max-width: 650px;
-  margin-bottom: 30px;
-
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.363;
-  letter-spacing: 0.06em;
-  color: $secondary-color;
 }
 
 .modal-btn,

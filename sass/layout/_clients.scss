@@ -1,16 +1,16 @@
 .client {
   padding-top: 94px;
   padding-bottom: 94px;
-}
-.client-list {
+   
+   &-list {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
 }
-
-.client-list-item {
+   &-list-item {
   width: 170px;
   height: 90px;
+}
 }
 
 .client-list-item-link {
@@ -22,18 +22,19 @@
   box-sizing: border-box;
   border-radius: 4px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.client-list-item-link svg {
+  & svg {
   width: 90px;
   height: 53px;
   fill: #afb1b8;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client-list-item-link:hover svg {
+ &:hover svg {
   fill: $accent-color;
 }
-.client-list-item-link:hover {
+
+ &:hover {
   border: 1px solid $accent-color;
+}
 }

@@ -1,40 +1,16 @@
 .contact {
   font-style: normal;
-}
 
-.footer {
-  background-color: $background-secondary;
-}
-
-.footer-contact {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-.contact-link:hover,
-.contact-link:focus,
-.contact-location:hover,
-.contact-location:focus {
+  &-link:hover,
+  &-link:focus, 
+  &-location:hover, 
+  &-location:focus {
   color: $accent-color;
 }
-
-.footer-logo {
-  display: block;
-  margin-bottom: 20px;
-
-  font-family: $secondary-font;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.192;
-  letter-spacing: 0.03em;
-  color: $secondary-color;
-}
-
-.contact:not(:last-child) {
+   &:not(:last-child) {
   margin-bottom: 10px;
 }
-
-.contact-location {
+   &-location {
   display: block;
   margin-bottom: 10px;
 
@@ -45,13 +21,11 @@
   color: $secondary-color;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.contact-link.tel {
+   &-link.tel {
   display: block;
   margin-bottom: 0;
 }
-
-.contact-link {
+   &-link {
   display: block;
   margin-bottom: 10px;
 
@@ -62,18 +36,31 @@
   color: $contact-color;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+}
 
-.footer .container {
+.footer {
+  background-color: $background-secondary;
+
+   &-contact {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+   &-logo {
+  display: block;
+  margin-bottom: 20px;
+
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.192;
+  letter-spacing: 0.03em;
+  color: $secondary-color;
+}
+   & .container {
   display: flex;
 }
-
-/* ==========SOCIAL============ */
-.social-footer {
-  padding: 70px 93px 100px 70px;
-  min-width: 200px;
-}
-
-.footer-title {
+   &-title {
   display: flex;
   font-weight: 700;
   font-size: 14px;
@@ -83,9 +70,19 @@
   color: $secondary-color;
   margin-bottom: 20px;
 }
+}
 
-/*====sprite social list====*/
+.social-footer {
+  padding: 70px 93px 100px 70px;
+  min-width: 200px;
+}
 
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  width: 210px;
+  margin: 0 auto;
+}
 
 .social-list_item-link {
   display: flex;
@@ -96,27 +93,23 @@
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.social-list_item-link svg {
+   
+   & svg {
   width: 20px;
   height: 20px;
   fill: $secondary-color;
 }
-
-.social-list_item-link:hover {
+   &:hover {
   background: $accent-color;
 }
-/* ===========END SOCIAL===========*/
+}
 
-/* ===========SUBSCRIPTION===========*/
 .subscription {
   padding-top: 72px;
   padding-bottom: 94px;
   min-width: 570px;
-}
-
-.subscription-form-input {
+  
+   &-form-input {
   width: 350px;
   height: 50px;
   margin-right: 12px;
@@ -133,8 +126,7 @@
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-
-.subscription-form-button {
+   &-form-button {
   position: relative;
   padding-left: 28px;
 
@@ -154,9 +146,10 @@
   letter-spacing: 0.06em;
   color: $secondary-color;
 }
-.subscription-form-button-svg {
+   &-form-button-svg {
   position: absolute;
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
+}
 }

@@ -1,10 +1,10 @@
-.social-list {
+.team-social-list {
   display: flex;
   justify-content: space-between;
   width: 210px;
   margin: 0 auto;
-}
-.team-social-list_item-link {
+
+   &_item-link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,21 +12,20 @@
   height: 44px;
   border-radius: 50%;
   transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+   & svg {
+     width: 20px;
+     height: 20px;
+     fill: #afb1b8;
+     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.team-social-list_item:not(:last-child) {
-  margin-right: 10px;
+   &:hover svg,
+   &:hover {
+     fill: $secondary-color;
+     background: $accent-color;
 }
-
-.team-social-list_item-link svg {
-  width: 20px;
-  height: 20px;
-  fill: #afb1b8;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.team-social-list_item-link:hover svg,
-.team-social-list_item-link:hover {
-  fill: $secondary-color;
-  background: $accent-color;
+  &_item:not(:last-child) {
+     margin-right: 10px;
+}
 }

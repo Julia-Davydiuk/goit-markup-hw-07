@@ -1,36 +1,25 @@
 .advantages {
   padding-top: 94px;
   padding-bottom: 94px;
+
+   &-title {
+     padding-top: 30px;
+     margin-bottom: 10px;
+     font-weight: 700;
+     font-size: 14px;
+     line-height: 1.142;
+     letter-spacing: 0.03em;
+     text-transform: uppercase;
+     color: $title-color;
+}
 }
 .advantages-list {
   display: flex;
-}
 
-.advantages-list-item:not(:last-child) {
+  &-item:not(:last-child) {
   margin-right: 30px;
 }
-
-.advantages-title {
-  padding-top: 30px;
-  margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.142;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: $title-color;
-}
-
-.description {
-  width: 260px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.714;
-  letter-spacing: 0.03em;
-  color: $description-color;
-}
-
-.advantages-list-item::before {
+  &-item::before {
   display: block;
   content: "";
   height: 120px;
@@ -40,48 +29,59 @@
   background-color: $-bacground-team;
   border-radius: 4px;
 }
-
-.icone-antenna-1::before {
-  background-image: url(../image/advantages/antenna-1.svg);
+}
+.description {
+  width: 260px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: $description-color;
 }
 
-.icone-clock-2::before {
+.icone {
+   &-antenna-1::before {
+  background-image: url(../image/advantages/antenna-1.svg);
+}
+   &-clock-2::before {
   background-image: url(../image/advantages/clock-2.svg);
 }
 
-.icone-diagram-3::before {
+   &-diagram-3::before {
   background-image: url(../image/advantages/diagram-3.svg);
 }
-
-.icone-astronaut-4::before {
+   &-astronaut-4::before {
   background-image: url(../image/advantages/astronaut-4.svg);
 }
+}
+
 .advantages-icon {
   display: flex;
   background-color: $bacground-team;
-}
-.advantages-icon-item {
+
+   &-item {
   width: 270px;
 }
-
-.advantages-icon-item:not(:last-child) {
+  &-item:not(:last-child) {
   padding-right: 30px;
 }
-.advantages-icon {
+
+ & {
   display: inline-flex;
   width: 255px;
   height: 120px;
   margin: 0 auto;
   background-color: $bacground-team;
 }
-.advantages-icon:not(:last-child) {
+
+  &:not(:last-child) {
   margin-right: 30px;
 }
-
-.advantages-icon svg {
+  & svg {
   width: 70px;
   height: 70px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
 }

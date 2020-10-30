@@ -2,10 +2,11 @@
 @import "./utils/variables";
 
 //base
-@import "./utils/visually-hidden";
+@import "./base/visually-hidden";
 @import "./base/common";
 
 //components
+@import "./components/logo";
 @import "./components/social-list";
 
 //layout

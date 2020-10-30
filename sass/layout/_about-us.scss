@@ -5,13 +5,13 @@
 .about-us-list {
   display: flex;
 
-   &-item {
-     width: 370px;
-     position: relative;
-}
-   &-item:not(:last-child) {
-  margin-right: 30px;
-}
+  &-item {
+    width: 370px;
+    position: relative;
+  }
+  &-item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .about-us-overlay {
@@ -23,13 +23,13 @@
   background: rgba(47, 48, 58, 0.8);
   padding: 27px 75px;
 
-   &-title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.142;
-  text-align: center;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: $secondary-color;
-}
+  &-title {
+    font-weight: $font-weight-main;
+    font-size: $font-size-main;
+    line-height: $line-height-main;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $secondary-color;
+  }
 }

@@ -4,17 +4,17 @@
   text-align: center;
   background: $background-secondary;
 
-   &-title {
-  margin: 0 auto;
-  max-width: 650px;
-  margin-bottom: 30px;
+  &-title {
+    margin: 0 auto;
+    max-width: 650px;
+    margin-bottom: 30px;
 
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.363;
-  letter-spacing: 0.06em;
-  color: $secondary-color;
-}
+    font-weight: $font-weight-hero;
+    font-size: 44px;
+    line-height: 1.363;
+    letter-spacing: 0.06em;
+    color: $secondary-color;
+  }
 }
 
 .overlay {
@@ -43,8 +43,8 @@
   border: inherit;
 
   font-family: Roboto;
-  font-weight: 700;
-  font-size: 16px;
+  font-weight: $font-weight-main;
+  font-size: $font-size-secondary;
   line-height: 1.875;
   letter-spacing: 0.06em;
   color: $secondary-color;

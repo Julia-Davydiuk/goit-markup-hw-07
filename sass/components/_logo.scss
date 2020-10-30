@@ -5,7 +5,7 @@
   padding-bottom: 25px;
 
   font-family: $secondary-font;
-  font-weight: 700;
+  font-weight: $font-weight-main;
   font-size: 26px;
   line-height: 1.192;
   letter-spacing: 0.03em;
@@ -20,7 +20,7 @@
     margin-bottom: 20px;
 
     font-family: $secondary-font;
-    font-weight: 700;
+    font-weight: $font-weight-main;
     font-size: 26px;
     line-height: 1.192;
     letter-spacing: 0.03em;
